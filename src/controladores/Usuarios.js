@@ -1,5 +1,6 @@
 const usuarios = require("../modelos/Usuarios");
 const Credito = require("./CartaoCredito");
+const Endereco = require("../controladores/Enderecos");
 
 class Usuarios {
   async listarTodos(req, res) {
@@ -49,6 +50,7 @@ class Usuarios {
           tabela: tabela,
         });
         Credito.cadatrarUsuarioID(tabela.id);
+        Endereco.cadastrarUsuarioID(tabela.id);
       } else {
         res.send({
           criado: false,

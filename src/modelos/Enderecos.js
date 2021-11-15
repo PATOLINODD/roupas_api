@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const db = require("../infra/database");
 const Usuarios = require("../modelos/Usuarios");
 
-const Endercos = db.define("Enderecos", {
+const Enderecos = db.define("Enderecos", {
   usuario_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -27,4 +27,9 @@ const Endercos = db.define("Enderecos", {
   bloco: {
     type: DataTypes.STRING(3),
   },
+  bairro: {
+    type: DataTypes.STRING,
+  },
 });
+
+module.exports = Enderecos;

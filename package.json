@@ -1,0 +1,30 @@
+{
+  "name": "roupas_api",
+  "version": "1.0.0",
+  "description": "api de roupas faça seu estilo",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "sequelize": "^6.9.0",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PATOLINODD/roupas_api.git"
+  },
+  "author": "Patrick Soares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PATOLINODD/roupas_api/issues"
+  },
+  "homepage": "https://github.com/PATOLINODD/roupas_api#readme"
+}

@@ -1,8 +1,13 @@
-const Credito = require("../controladores/CartaoCredito");
+const {
+  ListarID,
+  Cadastrar,
+  Atualizar,
+  Deletar,
+} = require("../controladores/CartaoCredito/index");
 
 module.exports = (App) => {
-  App.get("/cartaocredito/:id", Credito.listarID);
-  App.post("/cartaocredito/cadastrar/:id", Credito.cadastrarCartao);
-  App.put("/cartaocredito/atualizar/:id", Credito.atualizar);
-  App.delete("/cartaocredito/deletar/:id", Credito.deletar);
+  App.get("/cartaocredito/:id", ListarID.listarID);
+  App.post("/cartaocredito/cadastrar/:id", Cadastrar.cadastrarCartao);
+  App.put("/cartaocredito/atualizar/:id", Atualizar.atualizar);
+  App.delete("/cartaocredito/deletar/:id", Deletar.deletar);
 };

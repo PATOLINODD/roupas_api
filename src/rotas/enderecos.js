@@ -1,8 +1,13 @@
-const Enderecos = require("../controladores/Enderecos");
+const {
+  ListarUsuarioID,
+  Cadastrar,
+  Atualizar,
+  Deletar,
+} = require("../controladores/enderecos/index");
 
 module.exports = (App) => {
-  App.get("/enderecos/:id", Enderecos.listarID);
-  App.post("/enderecos/cadastrar/:id", Enderecos.cadastrar);
-  App.put("/enderecos/atualizar/:id", Enderecos.atualizar);
-  App.delete("/enderecos/deletar/:id", Enderecos.deletar);
+  App.get("/enderecos/:id", ListarUsuarioID.listarUsuarioID);
+  App.post("/enderecos/cadastrar/:id", Cadastrar.cadastrar);
+  App.put("/enderecos/atualizar/:id", Atualizar.atualizar);
+  App.delete("/enderecos/deletar/:id", Deletar.deletar);
 };

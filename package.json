@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "chalk": "^4.1.2",
+    "jest": "^27.3.1",
     "nodemon": "^2.0.15"
   },
   "scripts": {

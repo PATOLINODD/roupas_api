@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const db = require("../infra/database");
 const Usuarios = require("../modelos/Usuarios");
 
-const CartaoCredito = db.define("cartao_credito", {
+const CartaoCredito = db.define("Cartao_credito", {
   usuario_id: {
     type: DataTypes.INTEGER,
     allowNull: false,

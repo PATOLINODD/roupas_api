@@ -4,7 +4,7 @@ class ListarID {
   async listarID(req, res) {
     try {
       const usuario_id = req.params.id;
-      const lista = await compras.findOne({
+      const lista = await compras.findAll({
         where: { usuario_id: usuario_id },
       });
       if (lista) {

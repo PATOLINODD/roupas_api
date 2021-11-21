@@ -1,5 +1,6 @@
 const { roupas } = require("../../modelos/index");
 
+//deleção dos dados
 class Deletar {
   async deletar(req, res) {
     try {
@@ -9,6 +10,9 @@ class Deletar {
           id: id,
         },
       });
+      /** o mesmo que ...
+       * DELETE FROM Roupas WHERE id = ?
+       */
       if (deletado[0] >= 1) {
         res.send({
           status: "deletado",

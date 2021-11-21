@@ -1,3 +1,5 @@
+//importação e exportação das classes endereços
+
 const Cadastrar = require("./Cadastrar"),
   ListarUsuarioID = require("./ListarUsuarioID"),
   CadastrarUsuarioIDNoEndereco = require("./CadastrarUsuarioID"),

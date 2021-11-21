@@ -1,6 +1,6 @@
 const { cartaoCredito } = require("../../src/modelos/index");
-const sequelize = require("../../src/infra/database");
+const db = require("../../src/infra/database");
 
-test("cartao deve ser um modelo, deve retornar true", () => {
-  expect(cartaoCredito).toBe(sequelize.models.cartao_credito);
+test("o modelo cartao_credito deve retornar true", () => {
+  expect(cartaoCredito).toBe(db.models.Cartao_credito);
 });

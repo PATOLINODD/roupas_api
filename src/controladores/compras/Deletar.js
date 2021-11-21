@@ -1,12 +1,15 @@
 const { compras } = require("../../modelos/index");
-const { deletar } = require("../enderecos/Deletar");
 
+//classe Deletar responsavel pela destruição dos dados de compras
 class Deletar {
   async deletar(req, res) {
     try {
       const id = req.params.id;
       const deletado = await compras.destroy({ where: { id: id } });
-      console.log(deletado);
+      /** o mesmo que ...
+       * DELETE FROM Compras WHERE id = ?
+       * lembrando que o id (chave primaria) é criado por padrão em cada tabela
+       */
       if (deletado) {
         res.send({
           deletado: true,

@@ -1,3 +1,4 @@
+//importando e exportando todas as classes de cartao
 const Cadastrar = require("./Cadastrar"),
   CadastrarUsuarioIDNoCartao = require("./CadastrarUsuarioID"),
   ListarID = require("./ListarID"),

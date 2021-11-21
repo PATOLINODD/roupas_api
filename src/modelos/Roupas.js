@@ -1,14 +1,18 @@
 const { DataTypes } = require("sequelize");
 const db = require("../infra/database");
 
+//criação da tabela Roupas no banco de dados
 const Roupas = db.define("Roupas", {
   peca: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING, //armazena um varchar(255)
     allowNull: false,
   },
   modelo: {
     type: DataTypes.STRING,
     allowNull: false,
+  },
+  estampa: {
+    type: DataTypes.STRING,
   },
   marca: {
     type: DataTypes.STRING,
@@ -19,7 +23,7 @@ const Roupas = db.define("Roupas", {
     allowNull: false,
   },
   tamanho: {
-    type: DataTypes.STRING(2),
+    type: DataTypes.STRING(2), //armazena um varchar(2)
     allowNull: false,
   },
   numeracao: {
@@ -39,7 +43,7 @@ const Roupas = db.define("Roupas", {
     allowNull: false,
   },
   preco: {
-    type: DataTypes.DOUBLE,
+    type: DataTypes.DOUBLE, //armezena numeros decimais
     allowNull: false,
   },
   estoque: {

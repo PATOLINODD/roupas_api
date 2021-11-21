@@ -1,3 +1,5 @@
+//importando e exportando todos os modelos criados
+
 const roupas = require("./Roupas"),
   usuarios = require("./Usuarios"),
   enderecos = require("./Enderecos"),

@@ -1,5 +1,7 @@
 const { enderecos } = require("../../modelos/index");
 
+//Classe Deletar faz o mesmo que Atualizar, porém os valores mudam pra null
+//pois o usuario ainda existem
 class Deletar {
   async deletar(req, res) {
     try {

@@ -1,5 +1,10 @@
 const { enderecos } = require("../../modelos/index");
 
+//classe Cadastrar, a tabela começa com valores nulos porque,
+//quando o usuario cria um novo cadastro já cria
+//uma tabela endereços relacionada ao usuario
+
+//essa classe faz o mesmo que a classe Atualizar
 class Cadastrar {
   async cadastrar(req, res) {
     try {

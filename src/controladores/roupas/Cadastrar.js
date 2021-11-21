@@ -1,5 +1,7 @@
+//importação da tabela pra manipulação dos dados
 const { roupas } = require("../../modelos/index");
 
+//classe Cadastrar para a criação dos dados na tabela
 class Cadastrar {
   async cadastrar(req, res) {
     try {
@@ -8,6 +10,7 @@ class Cadastrar {
         where: {
           peca: roupa.peca,
           modelo: roupa.modelo,
+          estampa: roupa.estampa,
           marca: roupa.marca,
           cor: roupa.cor,
           tamanho: roupa.tamanho,
@@ -19,6 +22,10 @@ class Cadastrar {
           estoque: roupa.estoque,
         },
       });
+      /**o comando acima procura algum dado existente se não existir ele cria,
+       * se existir ele mostra. Talvez ele use um comando INSERT ... ON DUPLICATE KEY UPDATE.
+       * ou talvez use um comando por codigos pra uma melhor criação dos dados
+       */
       if (created) {
         res.status(201).send({
           criado: created,

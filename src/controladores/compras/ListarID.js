@@ -1,5 +1,6 @@
 const { compras } = require("../../modelos/index");
 
+//classe ListarID responsavel pela visualização de cada compra feita pelo usuario
 class ListarID {
   async listarID(req, res) {
     try {
@@ -7,6 +8,10 @@ class ListarID {
       const lista = await compras.findAll({
         where: { usuario_id: usuario_id },
       });
+      /** o mesmo que ...
+       * SELECT * FROM Compras
+       * WHERE usuario_id = ?
+       */
       if (lista) {
         res.send({ correspondencia: lista });
       } else {

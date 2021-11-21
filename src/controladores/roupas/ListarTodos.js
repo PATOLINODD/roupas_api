@@ -1,9 +1,13 @@
 const { roupas } = require("../../modelos/index");
 
+//lista todos os registros
 class ListarTodos {
   async listarTodos(req, res) {
     try {
       const lista = await roupas.findAll();
+      /**o mesmo que ...
+       * SELECT * FROM Roupas
+       */
       if (lista.length > 0) {
         res.send(lista);
       } else {

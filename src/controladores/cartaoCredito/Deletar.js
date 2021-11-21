@@ -1,10 +1,12 @@
 const { cartaoCredito } = require("../../modelos/index");
 
+//classe Deletar está responsavel por deletar o dados do cartão apenas
+//faz a mesma tarefa que a classe Atualizar, mas tranforma todos os dados em null
 class Deletar {
   async deletar(req, res) {
     try {
       const id = req.params.id;
-      const deletado = await Credito.update(
+      const deletado = await cartaoCredito.update(
         {
           numeracao: null,
           bandeira: null,

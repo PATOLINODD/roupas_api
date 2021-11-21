@@ -1,4 +1,6 @@
 const { usuarios } = require("../../modelos/index");
+
+//metodos para a deleção dos registros de cartão e endereços
 const { DestruirCartao } = require("../cartaoCredito/index");
 const { DestruirEnderecos } = require("../enderecos/index");
 
@@ -17,6 +19,9 @@ class Deletar {
           deletado: true,
           correspondencia: id,
         });
+        /**quando o usuario deletar seu registro
+         * os metodos serão chamados e tudo que estava relacionado será deletado também
+         */
         DestruirCartao.destruir(id);
         DestruirEnderecos.destruir(id);
       } else {

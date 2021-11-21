@@ -1,5 +1,6 @@
 const { enderecos } = require("../../modelos/index");
 
+//classe Atualizar responsavel pela atualização do endereço de usuario
 class Atualizar {
   async atualizar(req, res) {
     try {
@@ -21,6 +22,12 @@ class Atualizar {
           },
         }
       );
+      /**o mesmo que ...
+       * UPDATE Enderecos
+       * SET cep = ?, endereco = ?, numero = ?, apartamento = ?,
+       * bloco = ?, bairro = ?
+       * WHERE usuario_id = ?
+       */
       if (atualizado[0] === 1) {
         res.send({
           atualizado: true,

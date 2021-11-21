@@ -1,5 +1,6 @@
 const { usuarios } = require("../../modelos/index");
 
+//classe para atualizar registro de usuario
 class Atualizar {
   async atualizar(req, res) {
     try {
@@ -18,6 +19,11 @@ class Atualizar {
           },
         }
       );
+      /**o mesmo que ...
+       * UPDATE Usuarios
+       * SET nome = ?, email = ?, senha = ?
+       * WHERE id = ?
+       */
       if (atualizado[0] > 0) {
         res.send({
           atualizado: true,

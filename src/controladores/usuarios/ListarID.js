@@ -1,10 +1,15 @@
 const { usuarios } = require("../../modelos/index");
 
+//encontrar usuario pelo id
 class ListarID {
   async listarID(req, res) {
     try {
       const id = req.params.id;
       const lista = await usuarios.findByPk(id);
+      /**o mesmo que ...
+       * SELECT * FROM Usuarios
+       * WHERE id = ?
+       */
       if (lista) {
         res.send({
           correspondencia: id,

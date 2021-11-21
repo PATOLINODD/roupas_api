@@ -1,3 +1,4 @@
+//importação e exportação das classes de Roupas
 const Cadastrar = require("./Cadastrar"),
   ListarTodos = require("./ListarTodos"),
   ListarID = require("./ListarID"),

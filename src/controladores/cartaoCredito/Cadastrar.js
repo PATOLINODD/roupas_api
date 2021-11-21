@@ -1,5 +1,6 @@
 const { cartaoCredito } = require("../../modelos/index");
 
+//classe Cadastrar faz a mesma coisa que a classe Atualizar
 class Cadastrar {
   async cadastrarCartao(req, res) {
     try {
@@ -20,7 +21,7 @@ class Cadastrar {
           },
         }
       );
-      if (cartao) {
+      if (cartao[0]) {
         res.status(201).send({
           criado: true,
           tabela: cartao,

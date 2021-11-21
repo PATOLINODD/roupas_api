@@ -1,5 +1,6 @@
 const { cartaoCredito } = require("../../modelos/index");
 
+//classe chamada quando usuario fizer um novo cadastro
 class CadatrarUsuarioID {
   async cadatrarUsuarioID(id) {
     try {

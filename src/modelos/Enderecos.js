@@ -2,8 +2,10 @@ const { DataTypes } = require("sequelize");
 const db = require("../infra/database");
 const Usuarios = require("../modelos/Usuarios");
 
+//criação da tabela Enderecos no banco de dados
 const Enderecos = db.define("Enderecos", {
   usuario_id: {
+    //chave estrangeira
     type: DataTypes.INTEGER,
     allowNull: false,
     unique: true,

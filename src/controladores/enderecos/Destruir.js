@@ -1,5 +1,6 @@
 const { enderecos } = require("../../modelos/index");
 
+//classe Destruir chamada quando o usuario deletar a propria conta
 class Destruir {
   async destruir(id) {
     try {

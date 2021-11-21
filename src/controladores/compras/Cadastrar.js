@@ -1,5 +1,6 @@
 const { compras } = require("../../modelos/index");
 
+//classe reponsavel pelo criação de uma nova compra
 class Compras {
   async cadastrar(req, res) {
     try {
@@ -8,6 +9,11 @@ class Compras {
         usuario_id: usuario_id,
         roupas_id: roupas_id,
       });
+
+      /** o mesmo que ...
+       * INSERT INTO Compras (usuario_id, roupas_id)
+       * VALUES (?, ?)
+       */
       if (tabela) {
         res.status(201).send({
           criado: true,

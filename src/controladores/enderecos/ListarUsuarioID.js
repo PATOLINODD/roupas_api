@@ -3,12 +3,17 @@ const { enderecos } = require("../../modelos/index");
 class ListarUsuarioID {
   async listarUsuarioID(req, res) {
     try {
-      const id = req.params.id;
+      const id = req.params.usuario_id;
       const lista = await enderecos.findOne({
         where: {
           usuario_id: id,
         },
       });
+      /**o mesmo que ...
+       * SELECT * FROM Enderecos
+       * WHERE usuario_id = ?
+       * LIMIT 1
+       */
       if (lista) {
         res.send({ lista: lista });
       } else {

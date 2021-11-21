@@ -1,5 +1,7 @@
+//tabela pra manipulação dos dados
 const { roupas } = require("../../modelos/index");
 
+//classe Atualizr pra atualizar os dados na tabela referente ao usuario
 class Atualizar {
   async atulizar(req, res) {
     try {
@@ -9,6 +11,7 @@ class Atualizar {
         {
           peca: roupa.peca,
           modelo: roupa.modelo,
+          estampa: roupa.estampa,
           marca: roupa.marca,
           cor: roupa.cor,
           tamanho: roupa.tamanho,
@@ -25,6 +28,11 @@ class Atualizar {
           },
         }
       );
+      /**o mesmo que ...
+       * UPDATE Roupas
+       * SET peca = ?, modelo = ?, marca = ?, cor = ?, tamanho = ?, numeracao = ?,
+       * genero = ?, faixa_etaria = ?, estacao = ?, preco = ?, estoque = ?
+       */
       if (atualizado[0] >= 1) {
         res.send("tabela atualizada");
       } else {

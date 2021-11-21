@@ -1,10 +1,15 @@
 const { roupas } = require("../../modelos/index");
 
+//classe ListarID lista por chave primaria, chave primaria é unica.
 class ListarID {
   async listarID(req, res) {
     try {
       const id = req.params.id;
       const lista = await roupas.findByPk(id);
+      /**o mesmo que ...
+       * SELECT * FROM Roupas
+       * WHERE id = ?
+       */
       if (lista) {
         res.send({
           correspondência: lista,

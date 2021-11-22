@@ -3,7 +3,6 @@ const App = require("./src/infra/customExpress");
 const db = require("./src/infra/database");
 
 const database = db.sync(); //sincronizando banco de dados
-
 database
   .then((resolves) => console.log(resolves))
   .catch((error) => console.log(error));

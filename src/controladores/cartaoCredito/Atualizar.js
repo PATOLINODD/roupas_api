@@ -30,7 +30,7 @@ class Atualizar {
       WHERE = usuario_id = ?
       */
       if (atualizado[0] === 1) {
-        res.send({
+        res.status(200).json({
           atualizado: true,
         });
       } else {

@@ -22,9 +22,8 @@ class Cadastrar {
         }
       );
       if (cartao[0]) {
-        res.status(201).send({
+        res.status(201).json({
           criado: true,
-          tabela: cartao,
         });
       } else {
         res.status(400).send({

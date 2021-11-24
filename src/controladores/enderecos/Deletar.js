@@ -5,7 +5,7 @@ const { enderecos } = require("../../modelos/index");
 class Deletar {
   async deletar(req, res) {
     try {
-      const usuarioID = req.params.id;
+      const usuarioID = req.params.usuario_id;
       const deletado = await enderecos.update(
         {
           cep: null,

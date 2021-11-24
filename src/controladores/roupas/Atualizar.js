@@ -34,9 +34,9 @@ class Atualizar {
        * genero = ?, faixa_etaria = ?, estacao = ?, preco = ?, estoque = ?
        */
       if (atualizado[0] >= 1) {
-        res.send("tabela atualizada");
+        res.send({ atualizado: true });
       } else {
-        res.status(400).send("não foi possivel atualizar");
+        res.status(400).send({ atualizado: false });
       }
     } catch (error) {
       res.status(400).send({ msgErro: error });

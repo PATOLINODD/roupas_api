@@ -17,9 +17,11 @@ class ListarID {
        * LIMIT 1
        */
       if (lista) {
-        res.send({
-          id: id,
-          tabela: lista,
+        res.json({
+          tabela: JSON.stringify(lista),
+          /**foi necessario fazer o stringify para os testes unitários
+           * o createdAt e updatedAt vinham como string, mas no teste não.
+           */
         });
       } else {
         res.status(404).send({

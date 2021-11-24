@@ -15,7 +15,7 @@ class ListarUsuarioID {
        * LIMIT 1
        */
       if (lista) {
-        res.send({ lista: lista });
+        res.send({ lista: JSON.stringify(lista) });
       } else {
         res.status(400).send({ lista: lista });
       }

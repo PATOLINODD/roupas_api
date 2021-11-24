@@ -13,12 +13,10 @@ class Deletar {
       if (deletado) {
         res.send({
           deletado: true,
-          id: id,
         });
       } else {
-        res.status(404).send({
+        res.status(400).send({
           deletado: false,
-          id: id,
         });
       }
     } catch (error) {

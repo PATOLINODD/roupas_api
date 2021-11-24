@@ -11,6 +11,6 @@ module.exports = (App) => {
    * realizar suas funções
    */
   App.post("/compras/cadastrar", Cadastrar.cadastrar);
-  App.get("/compras/:id", ListarID.listarID);
+  App.get("/compras/:usuario_id", ListarID.listarID);
   App.delete("/compras/deletar/:id", Deletar.deletar);
 };

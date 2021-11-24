@@ -29,10 +29,12 @@ class Cadastrar {
       if (created) {
         res.status(201).send({
           criado: created,
-          tabela: tabela,
         });
       } else {
-        res.send({ "tabela a ser inserida já existe": tabela });
+        res.status(400).send({
+          criado: created,
+          msgErro: "tabela já existe",
+        });
       }
     } catch (error) {
       res.status(400).send({ msgErro: error });

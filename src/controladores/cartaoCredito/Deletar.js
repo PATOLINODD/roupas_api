@@ -21,7 +21,6 @@ class Deletar {
           },
         }
       );
-      console.log(deletado);
       if (deletado[0] === 1) {
         res.send({
           deletado: true,

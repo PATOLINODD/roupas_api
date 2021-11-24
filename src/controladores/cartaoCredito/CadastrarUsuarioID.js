@@ -4,11 +4,12 @@ const { cartaoCredito } = require("../../modelos/index");
 class CadatrarUsuarioID {
   async cadatrarUsuarioID(id) {
     try {
-      await cartaoCredito.create({
+      const cartao = await cartaoCredito.create({
         usuario_id: id,
       });
+      if (cartao) return { criado: true };
     } catch (error) {
-      res.status(400).send({ msgErro: error });
+      throw error;
     }
   }
 }

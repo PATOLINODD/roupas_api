@@ -17,12 +17,10 @@ class Compras {
       if (tabela) {
         res.status(201).send({
           criado: true,
-          tabela: tabela,
         });
       } else {
         res.status(400).send({
           criado: false,
-          tabela: tabela,
         });
       }
     } catch (error) {

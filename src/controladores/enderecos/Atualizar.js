@@ -4,7 +4,7 @@ const { enderecos } = require("../../modelos/index");
 class Atualizar {
   async atualizar(req, res) {
     try {
-      const usuarioID = req.params.id;
+      const usuarioID = req.params.usuario_id;
       const endereco = req.body;
 
       const atualizado = await enderecos.update(
@@ -31,7 +31,6 @@ class Atualizar {
       if (atualizado[0] === 1) {
         res.send({
           atualizado: true,
-          dados: endereco,
         });
       } else {
         res.status(400).send({ atualizado: false });

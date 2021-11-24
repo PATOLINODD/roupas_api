@@ -12,7 +12,7 @@ module.exports = (App) => {
    * realizar suas funções
    */
   App.get("/enderecos/:usuario_id", ListarUsuarioID.listarUsuarioID);
-  App.post("/enderecos/cadastrar/:id", Cadastrar.cadastrar);
-  App.put("/enderecos/atualizar/:id", Atualizar.atualizar);
-  App.delete("/enderecos/deletar/:id", Deletar.deletar);
+  App.post("/enderecos/cadastrar/:usuario_id", Cadastrar.cadastrar);
+  App.put("/enderecos/atualizar/:usuario_id", Atualizar.atualizar);
+  App.delete("/enderecos/deletar/:usuario_id", Deletar.deletar);
 };

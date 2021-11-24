@@ -8,7 +8,7 @@ const { enderecos } = require("../../modelos/index");
 class Cadastrar {
   async cadastrar(req, res) {
     try {
-      const usuarioID = req.params.id;
+      const usuarioID = req.params.usuario_id;
       const endereco = req.body;
 
       const cadastrado = await enderecos.update(
@@ -29,7 +29,6 @@ class Cadastrar {
       if (cadastrado[0] === 1) {
         res.status(201).send({
           criado: true,
-          endereco: endereco,
         });
       } else {
         res.status(400).send({ criado: false });

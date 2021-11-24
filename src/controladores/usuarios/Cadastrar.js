@@ -18,7 +18,6 @@ class Cadastrar {
       if (tabela) {
         res.status(201).send({
           criado: true,
-          tabela: tabela,
         });
         /*quando usuario for cadastrado os metodos relacionados a ele serão chamados
          *e irá criar os registros com seu id como chave estrangeira em cada tabela
@@ -26,9 +25,8 @@ class Cadastrar {
         CadastrarUsuarioIDNoCartao.cadatrarUsuarioID(tabela.id);
         CadastrarUsuarioIDNoEndereco.cadastrarUsuarioID(tabela.id);
       } else {
-        res.send({
+        res.status(400).send({
           criado: false,
-          tabela: tabela,
         });
       }
     } catch (error) {

@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "chalk": "^4.1.2",
+    "jasmine": "^3.10.0",
     "jest": "^27.3.1",
     "nodemon": "^2.0.15",
     "supertest": "^6.1.6"

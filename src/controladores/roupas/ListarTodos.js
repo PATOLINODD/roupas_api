@@ -9,7 +9,7 @@ class ListarTodos {
        * SELECT * FROM Roupas
        */
       if (lista.length > 0) {
-        res.send(lista);
+        res.json({ lista: JSON.stringify(lista) });
       } else {
         res.status(404).send({ correspondencias: lista.length });
       }

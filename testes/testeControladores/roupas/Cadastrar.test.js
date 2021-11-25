@@ -4,7 +4,7 @@ const App = require("../../../src/infra/customExpress");
 
 App.use(express.json());
 
-test("deve retornar 400 e um json { criado: false, msgErro: 'tabela já existe' }", () => {
+test("deve retornar 200 e um json { criado: true }", () => {
   return supertest(App)
     .post("/roupas/cadastrar")
     .send({
@@ -23,10 +23,9 @@ test("deve retornar 400 e um json { criado: false, msgErro: 'tabela já existe' 
       estoque: 15,
     })
     .then((res) => {
-      expect(res.status).toBe(400);
+      expect(res.status).toBe(200); //se existir um mesmo registro vai dar status 400
       expect(res.body).toEqual({
-        criado: false,
-        msgErro: "tabela já existe",
+        criado: true,
       });
     });
 });

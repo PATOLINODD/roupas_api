@@ -13,14 +13,11 @@ class Deletar {
       /** o mesmo que ...
        * DELETE FROM Roupas WHERE id = ?
        */
-      if (deletado[0] >= 1) {
-        res.send({
-          status: "deletado",
-          quantidade: deletado,
-          id: id,
-        });
+      console.log(deletado);
+      if (deletado) {
+        res.send({ deletado: true });
       } else {
-        res.send({ correspondência: deletado, id: id });
+        res.status(400).send({ deletado: false });
       }
     } catch (error) {
       res.status(400).send({ msgErro: error });

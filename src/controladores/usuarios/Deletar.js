@@ -14,10 +14,10 @@ class Deletar {
           id: id,
         },
       });
-      if (deletado[0] > 0) {
+      console.log(deletado);
+      if (deletado) {
         res.send({
           deletado: true,
-          correspondencia: id,
         });
         /**quando o usuario deletar seu registro
          * os metodos serão chamados e tudo que estava relacionado será deletado também
@@ -25,9 +25,8 @@ class Deletar {
         DestruirCartao.destruir(id);
         DestruirEnderecos.destruir(id);
       } else {
-        res.send({
+        res.status(400).send({
           deletado: false,
-          correspondencia: id,
         });
       }
     } catch (error) {

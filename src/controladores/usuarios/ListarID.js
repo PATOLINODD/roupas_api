@@ -12,8 +12,7 @@ class ListarID {
        */
       if (lista) {
         res.send({
-          correspondencia: id,
-          tabela: lista,
+          tabela: JSON.stringify(lista),
         });
       } else {
         res.status(404).send({

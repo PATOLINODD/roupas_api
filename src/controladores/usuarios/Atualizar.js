@@ -27,14 +27,10 @@ class Atualizar {
       if (atualizado[0] > 0) {
         res.send({
           atualizado: true,
-          correspondencia: id,
-          quantidade: atualizado,
         });
       } else {
         res.send({
           atualizado: false,
-          correspondencia: id,
-          quantidade: atualizado,
         });
       }
     } catch (error) {

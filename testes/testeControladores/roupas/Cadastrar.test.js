@@ -23,7 +23,7 @@ test("deve retornar 200 e um json { criado: true }", () => {
       estoque: 15,
     })
     .then((res) => {
-      expect(res.status).toBe(200); //se existir um mesmo registro vai dar status 400
+      expect(res.status).toBe(201); //se existir um mesmo registro vai dar status 400
       expect(res.body).toEqual({
         criado: true,
       });

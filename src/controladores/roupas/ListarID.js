@@ -12,12 +12,11 @@ class ListarID {
        */
       if (lista) {
         res.send({
-          correspondência: lista,
+          correspondência: JSON.stringify(lista),
         });
       } else {
         res.status(404).send({
           correspondência: lista,
-          id: id,
         });
       }
     } catch (error) {

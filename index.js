@@ -1,11 +1,9 @@
 const chalk = require("chalk");
 const App = require("./src/infra/customExpress");
 const db = require("./src/infra/database");
+const { usuarios } = require("./src/modelos");
 
-const database = db.sync(); //sincronizando banco de dados
-database
-  .then((resolves) => console.log(resolves))
-  .catch((error) => console.log(error));
+db.sync({ alter: true, force: true }); //sincronizando banco de dados
 
 console.log(chalk.bgGreen(chalk.yellow("database iniciada com sucesso!")));
 

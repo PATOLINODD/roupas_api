@@ -16,7 +16,6 @@ class ListarID {
         });
       } else {
         res.status(404).send({
-          correspondencia: id,
           tabela: lista,
         });
       }

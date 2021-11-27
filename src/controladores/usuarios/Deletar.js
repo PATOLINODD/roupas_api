@@ -14,7 +14,6 @@ class Deletar {
           id: id,
         },
       });
-      console.log(deletado);
       if (deletado) {
         res.send({
           deletado: true,

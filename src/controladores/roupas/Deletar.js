@@ -13,7 +13,6 @@ class Deletar {
       /** o mesmo que ...
        * DELETE FROM Roupas WHERE id = ?
        */
-      console.log(deletado);
       if (deletado) {
         res.send({ deletado: true });
       } else {

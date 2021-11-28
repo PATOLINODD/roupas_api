@@ -1,20 +1,10 @@
 const { DataTypes } = require("sequelize");
 const db = require("../infra/database");
-const Usuarios = require("../modelos/Usuarios");
+const Usuarios = require("./Usuarios");
 
 //criação da tabela Cartao_credito no banco de dados
 //tabela de um pra um
 const CartaoCredito = db.define("Cartao_credito", {
-  usuario_id: {
-    //chave estrangeira
-    type: DataTypes.INTEGER,
-    allowNull: false, //padrão é false
-    unique: true,
-    references: {
-      model: Usuarios,
-      key: "id",
-    },
-  },
   numeracao: {
     type: DataTypes.STRING(16), //armazena um varchar(16)
     unique: true,

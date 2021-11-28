@@ -22,7 +22,7 @@ class Cadastrar {
         },
         {
           where: {
-            usuario_id: usuarioID,
+            UsuarioId: usuarioID,
           },
         }
       );

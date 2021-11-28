@@ -1,7 +1,6 @@
 const chalk = require("chalk");
 const App = require("./src/infra/customExpress");
 const db = require("./src/infra/database");
-const { usuarios } = require("./src/modelos");
 
 db.sync({ alter: true, force: true }); //sincronizando banco de dados
 

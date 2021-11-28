@@ -7,13 +7,17 @@ const { DestruirEnderecos } = require("../enderecos/index");
 class Deletar {
   async deletar(req, res) {
     try {
+      const { nome, email } = req.body;
       const id = req.params.id;
+      console.log(nome);
+      console.log(email);
 
       const deletado = await usuarios.destroy({
         where: {
           id: id,
         },
       });
+      console.log(deletado);
       if (deletado) {
         res.send({
           deletado: true,

@@ -6,7 +6,7 @@ class ListarUsuarioID {
       const id = req.params.usuario_id;
       const lista = await enderecos.findOne({
         where: {
-          usuario_id: id,
+          UsuarioId: id,
         },
       });
       /**o mesmo que ...

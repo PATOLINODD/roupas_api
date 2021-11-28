@@ -19,7 +19,7 @@ class Atualizar {
         },
         {
           where: {
-            usuario_id: id,
+            UsuarioId: id,
           },
         }
       );

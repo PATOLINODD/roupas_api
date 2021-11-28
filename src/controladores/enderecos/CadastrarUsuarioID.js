@@ -5,7 +5,7 @@ class CadastrarUsuarioID {
   async cadastrarUsuarioID(id) {
     try {
       await enderecos.create({
-        usuario_id: id,
+        UsuarioId: id,
       });
       /**o mesmo que ...
        * INSERT INTO Enderecos (usuario_id) VALUES (?)

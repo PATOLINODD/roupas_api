@@ -5,7 +5,7 @@ class CadatrarUsuarioID {
   async cadatrarUsuarioID(id) {
     try {
       const cartao = await cartaoCredito.create({
-        usuario_id: id,
+        UsuarioId: id,
       });
       if (cartao) return { criado: true };
     } catch (error) {

@@ -17,7 +17,7 @@ class Deletar {
         },
         {
           where: {
-            usuario_id: usuarioID,
+            UsuarioId: usuarioID,
           },
         }
       );

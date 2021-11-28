@@ -8,7 +8,7 @@ class ListarID {
       const id = req.params.usuario_id;
       const lista = await cartaoCredito.findOne({
         where: {
-          usuario_id: id,
+          UsuarioId: id,
         },
       });
       /** o mesmo que ...

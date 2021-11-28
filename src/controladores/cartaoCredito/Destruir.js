@@ -7,7 +7,7 @@ class Destruir {
     try {
       await cartaoCredito.destroy({
         where: {
-          usuario_id: id,
+          UsuarioId: id,
         },
       });
       /* o mesmo que...

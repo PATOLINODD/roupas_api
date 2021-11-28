@@ -6,7 +6,7 @@ class Destruir {
     try {
       await enderecos.destroy({
         where: {
-          usuario_id: id,
+          UsuarioId: id,
         },
       });
     } catch (error) {

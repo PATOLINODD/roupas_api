@@ -1,9 +1,11 @@
 const { DataTypes } = require("sequelize");
 const db = require("../infra/database");
+const CartaoCredito = require("./cartaoCredito");
+const Enderecos = require("./Enderecos");
 
 //criação da tabela Usuarios no banco de dados
+//id chave primaria é criada por padrão
 const Usuarios = db.define("Usuarios", {
-  //id chave primaria é criada por padrão
   nome: {
     type: DataTypes.STRING, //armezana um varchar(255)
     allowNull: false,
@@ -19,5 +21,10 @@ const Usuarios = db.define("Usuarios", {
     allowNull: false,
   },
 });
+
+Usuarios.hasOne(CartaoCredito);
+CartaoCredito.belongsTo(Usuarios);
+Usuarios.hasMany(Enderecos);
+Enderecos.belongsTo(Usuarios);
 
 module.exports = Usuarios;
